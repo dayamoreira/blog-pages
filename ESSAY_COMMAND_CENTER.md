@@ -2,9 +2,18 @@
 
 Painel de controle vivo da sua candidatura. Atualizado automaticamente toda vez que um essay for adicionado, planejado ou modificado através da skill `college-essay`.
 
-**Status atual: 0 universidades cadastradas.** Este documento está pronto para receber a primeira assim que você fornecer universidade + essay + prompt + word limit.
+**Status atual: 34 universidades registradas na lista-alvo** (ver nota de divergência de contagem abaixo) **· 0 essays com prompt/word limit definidos ainda.** Este documento está pronto para receber o primeiro essay assim que você fornecer, para qualquer uma destas universidades, o prompt e o word limit específicos.
 
 *Última atualização: 10/08/2026.*
+
+---
+
+## ⚠️ Nota de verificação sobre a lista recebida
+
+Antes de qualquer coisa, dois pontos que preciso sinalizar em vez de ignorar:
+
+1. **Contagem:** o arquivo que você mandou se chama "35 Universidades", mas o array de dados tem **34 entradas** (9 REACH + 13 TARGET + 12 SAFETY). O card de resumo do próprio HTML diz "SAFETY: 13", mas só 12 universidades estão listadas no bloco `// SAFETY` do código. Registrei as 34 que existem de fato — se falta uma universidade de SAFETY, me diga qual para eu adicionar.
+2. **Fonte dos dados (accept rate, SAT mid-50%, deadline):** registrei exatamente os números que vieram no seu arquivo, sem verificar cada um individualmente contra fonte oficial (Common Data Set / site de admissions de cada escola) — isso ficaria mais preciso se, quando chegarmos na etapa RESEARCH de cada universidade específica (via skill `college-essay`), confirmarmos accept rate e deadline reais no site oficial antes de finalizar qualquer essay. Os deadlines também não têm ano explícito — assumindo que são para o ciclo de transferência que começa agora (aplicações em torno de fev/mar/abr de 2027), mas vale confirmar.
 
 ---
 
@@ -16,11 +25,70 @@ Este documento não substitui os outros oito — ele é o painel de controle que
 
 ---
 
-## Tabela Principal
+## University Registry (34)
+
+Sua lista-alvo completa, organizada por tier (classificação sua, registrada como você forneceu). Esta tabela é o "cadastro" — a Tabela Principal abaixo é onde cada *essay* de cada universidade é rastreado individualmente, assim que houver prompt.
+
+### 🚀 REACH (9) — accept rate 3–10%
+
+| Universidade | Accept % | SAT Mid-50% | Localização | CS | Deadline | Essay status |
+|---|---|---|---|---|---|---|
+| Stanford University | 3.9% | 1500–1580 | Stanford, CA | Muito Forte | Mar 15 | Prompts pendentes |
+| MIT | 4.6% | 1530–1580 | Cambridge, MA | Muito Forte | Mar 1 | Prompts pendentes |
+| Harvard University | 4.2% | 1500–1580 | Cambridge, MA | Muito Forte | Mar 1 | Prompts pendentes |
+| Yale University | 4.6% | 1490–1560 | New Haven, CT | Forte | Mar 1 | Prompts pendentes |
+| Columbia University | 4.3% | 1490–1560 | New York, NY | Forte | Mar 1 | Prompts pendentes |
+| Duke University | 5% | 1500–1570 | Durham, NC | Forte | Mar 1 | Prompts pendentes |
+| Rice University | 7% | 1460–1560 | Houston, TX | Muito Forte | Mar 1 | Prompts pendentes |
+| Johns Hopkins University | 8% | 1500–1570 | Baltimore, MD | Muito Forte | Mar 1 | Prompts pendentes |
+| Tufts University | 10% | 1430–1540 | Medford, MA | Forte | Mar 1 | Prompts pendentes |
+
+### 🎯 TARGET (13) — accept rate 10–25%
+
+| Universidade | Accept % | SAT Mid-50% | Localização | CS | Deadline | Essay status |
+|---|---|---|---|---|---|---|
+| Cornell University | 8% | 1460–1550 | Ithaca, NY | Muito Forte | Mar 15 | Prompts pendentes |
+| Vanderbilt University | 6% | 1460–1550 | Nashville, TN | Forte | Mar 15 | Prompts pendentes |
+| Tulane University | 10% | 1350–1480 | New Orleans, LA | Médio | Mar 15 | Prompts pendentes |
+| Grinnell College | 16% | 1330–1500 | Grinnell, IA | Médio | Mar 1 | Prompts pendentes |
+| Emory University | 15% | 1420–1530 | Atlanta, GA | Forte | Mar 15 | Prompts pendentes |
+| Northeastern University | 20% | 1380–1510 | Boston, MA | Forte | Mar 1 (Rolling) | Prompts pendentes |
+| University of Michigan – Ann Arbor | 20% | 1370–1540 | Ann Arbor, MI | Muito Forte | Apr 15 (Rolling) | Prompts pendentes |
+| University of North Carolina at Chapel Hill | 18% | 1360–1520 | Chapel Hill, NC | Forte | Mar 1 | Prompts pendentes |
+| University of Texas at Austin | 20% | 1270–1490 | Austin, TX | Muito Forte | Mar 15 | Prompts pendentes |
+| University of Virginia | 20% | 1370–1540 | Charlottesville, VA | Forte | Mar 1 | Prompts pendentes |
+| Washington University in St. Louis | 11% | 1470–1560 | St. Louis, MO | Forte | Mar 15 | Prompts pendentes |
+| Wellesley College | 24% | 1380–1510 | Wellesley, MA | Médio | Mar 1 | Prompts pendentes |
+| New York University | 25% | 1410–1530 | New York, NY | Forte | Apr 1 (Rolling) | Prompts pendentes |
+
+### 🛡️ SAFETY (12 — ver nota de contagem acima) — accept rate 25%+
+
+| Universidade | Accept % | SAT Mid-50% | Localização | CS | Deadline | Essay status |
+|---|---|---|---|---|---|---|
+| Case Western Reserve University | 42% | 1340–1510 | Cleveland, OH | Forte | Mar 15 | Prompts pendentes |
+| Stevens Institute of Technology | 32% | 1300–1500 | Hoboken, NJ | Forte | Mar 15 | Prompts pendentes |
+| Brandeis University | 34% | 1350–1520 | Waltham, MA | Médio | Mar 15 | Prompts pendentes |
+| University of Rochester | 30% | 1350–1510 | Rochester, NY | Forte | Mar 15 | Prompts pendentes |
+| Purdue University | 53% | 1260–1470 | West Lafayette, IN | Muito Forte | Mar 1 | Prompts pendentes |
+| University of Illinois Urbana-Champaign | 60% | 1300–1520 | Urbana, IL | Muito Forte | Mar 1 | Prompts pendentes |
+| University of Maryland | 45% | 1320–1500 | College Park, MD | Forte | Mar 1 | Prompts pendentes |
+| University of Massachusetts Amherst | 60% | 1260–1440 | Amherst, MA | Forte | Mar 1 | Prompts pendentes |
+| University of Pittsburgh | 50% | 1300–1480 | Pittsburgh, PA | Forte | Mar 1 | Prompts pendentes |
+| Virginia Tech | 70% | 1200–1420 | Blacksburg, VA | Muito Forte | Mar 1 | Prompts pendentes |
+| Rochester Institute of Technology | 60% | 1250–1480 | Rochester, NY | Forte | Mar 15 | Prompts pendentes |
+| Worcester Polytechnic Institute | 50% | 1310–1520 | Worcester, MA | Muito Forte | Mar 1 | Prompts pendentes |
+
+### 💡 Observação fora da tabela: a coluna "Cheerleading" do seu arquivo original
+
+Seu HTML tinha uma coluna inteira comparando força/inclusividade de cheerleading por escola — isso não é um dado neutro de admissions, é um sinal real de prioridade pessoal sua que ainda não está documentado em nenhum lugar do sistema. Isso conecta diretamente a algo que já está em `STORY_BANK.md` (S27): você mencionou querer participar de "experiências universitárias... de esportes a atividades estudantis" mas sentir "minha idade e meu corpo antes de qualquer outra característica minha". Vale uma pergunta direta: **cheerleading é algo que você já fez, quer tentar, ou é só um critério de ambiente de campus ao escolher escola?** Se houver uma história real aí, é um candidato forte para preencher a lacuna de "comunidade fora de contextos institucionais" já registrada em APPLICATION GAPS.
+
+---
+
+## Tabela Principal (por essay)
 
 | University | Essay | Prompt | Word Limit | Category | Story | Structure | Core Trait | Status |
 |---|---|---|---|---|---|---|---|---|
-| *(aguardando primeira universidade)* | | | | | | | | |
+| *(aguardando o primeiro prompt — 34 universidades já cadastradas acima, nenhuma com essay iniciado)* | | | | | | | | |
 
 ---
 
@@ -127,6 +195,7 @@ Características e dimensões importantes da Dayane que **ainda não aparecem em
 4. **A tutoria de CS no BHCC** (fato objetivo real, sem cena ainda) — provavelmente a lacuna mais fácil de preencher e mais valiosa para Leadership/Contribution.
 5. **Uma decisão difícil recente/atual** — as documentadas (S09, S14) são todas de anos atrás.
 6. **Interesse por arte** (Watercolor I, Digital Imaging for Artist, ambas A) — nunca mencionado na narrativa, pode não ser nada ou pode ser uma dimensão inteira ausente.
+7. **Cheerleading** — descoberto agora, indiretamente, pela presença dessa coluna na sua planilha de universidades-alvo (ver nota na seção University Registry). Ainda não sei se é história, interesse atual, ou só critério de campus. Conecta com S27 (medo relacionado a idade/corpo em atividades estudantis).
 
 Esta seção deveria encolher conforme universidades forem cadastradas e esses gaps forem preenchidos com histórias novas.
 
@@ -136,7 +205,7 @@ Esta seção deveria encolher conforme universidades forem cadastradas e esses g
 
 Essays Why Us / Why Major que ainda precisam de pesquisa institucional específica (ver `COLLEGE_ESSAY_BLUEPRINT.md`, Regra Global 6 — este Blueprint não pode fazer essa pesquisa sem uma universidade nomeada).
 
-*Nenhuma universidade cadastrada ainda — assim que a primeira for adicionada, todo essay Why Us/Why Major dela entra automaticamente nesta lista até a etapa 1 (RESEARCH) do workflow ser concluída.*
+**34 universidades cadastradas, 0 com pesquisa institucional feita ainda.** Assim que um prompt de Why Us ou Why Major for fornecido para qualquer uma delas, essa universidade entra automaticamente na fila da etapa 1 (RESEARCH) do workflow da skill `college-essay`, seguindo o mesmo padrão de `ADMISSIONS_PRINCIPLES.md` (fontes oficiais, 🎓 vs. 🔍 separados). Como são 34 escolas, recomendo priorizar a pesquisa pela ordem em que os prompts forem chegando, não tentar pesquisar todas de uma vez.
 
 **Lembrete permanente também registrado aqui:** a Bachelor's em Computer Science pela Descomplica (mai/2022–mai/2026, ver `STORY_BANK.md` linha do tempo e Pergunta 1) segue sem esclarecimento. Isso não é uma lacuna de pesquisa institucional, mas afeta diretamente qualquer essay de Transfer ou qualquer Why Major que narre a trajetória acadêmica completa — mantenho o lembrete aqui até ser resolvido.
 
@@ -160,4 +229,4 @@ Essays Why Us / Why Major que ainda precisam de pesquisa institucional específi
 
 ## Próximos passos
 
-Este painel está pronto para receber dados reais. Assim que você me der a primeira universidade + essay + prompt + word limit, eu aciono a skill `college-essay`, executo o workflow de 14 etapas, e a primeira linha da Tabela Principal (mais as seis seções de análise) deixa de estar vazia.
+34 universidades já cadastradas no University Registry. O que falta para a Tabela Principal (por essay) começar a se preencher é você me passar, para qualquer uma delas, o **prompt específico + word limit** de um essay (personal statement via Common App, ou um supplement). Assim que isso chegar, eu aciono a skill `college-essay`, executo o workflow de 14 etapas, e a linha correspondente — mais as seis seções de análise — deixa de estar vazia. Dado o volume (34 escolas), pode fazer sentido priorizar o Personal Statement do Common App primeiro, já que ele provavelmente vale para a maioria destas universidades ao mesmo tempo.
