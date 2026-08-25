@@ -1,11 +1,11 @@
 ---
 name: college-essay
-description: Workflow obrigatório de 14 etapas para planejar, estruturar e revisar college application essays da Dayane, usando como fontes de verdade os 8 documentos do sistema (ADMISSIONS_PRINCIPLES, ESSAY_ANALYSIS_DATABASE, ESSAY_STRUCTURES, WRITING_TECHNIQUES, STORY_BANK, APPLICANT_NARRATIVE, COLLEGE_ESSAY_BLUEPRINT, VOICE_PROFILE). Use sempre que ela fornecer universidade + prompt + word limit e pedir para trabalhar em um essay de admissão — planejar, gerar ângulos, montar outline, escrever rascunho, ou revisar algo já escrito. Também use se ela mencionar "essay", "supplement", "personal statement", "why us", "why major" no contexto de aplicação para faculdade. Não use para cover letters de emprego (existe uma skill separada para isso) nem para nenhum outro tipo de texto.
+description: Workflow obrigatório de 14 etapas para planejar, estruturar e revisar college application essays da Dayane, usando como fontes de verdade os 9 documentos do sistema (ADMISSIONS_PRINCIPLES, ESSAY_ANALYSIS_DATABASE, ESSAY_STRUCTURES, WRITING_TECHNIQUES, STORY_BANK, APPLICANT_NARRATIVE, COLLEGE_ESSAY_BLUEPRINT, VOICE_PROFILE, ESSAY_COMMAND_CENTER). Use sempre que ela fornecer universidade + prompt + word limit e pedir para trabalhar em um essay de admissão — planejar, gerar ângulos, montar outline, escrever rascunho, ou revisar algo já escrito. Também use se ela mencionar "essay", "supplement", "personal statement", "why us", "why major" no contexto de aplicação para faculdade. Não use para cover letters de emprego (existe uma skill separada para isso) nem para nenhum outro tipo de texto.
 ---
 
 # College Essay Workshop
 
-Skill que transforma o sistema de 8 documentos construído nesta conta (pesquisa oficial de admissions + banco de essays reais analisados + taxonomia de estrutura + biblioteca de técnicas + banco de histórias pessoais da Dayane + síntese narrativa + blueprint estratégico + perfil de voz) em um workflow executável, obrigatório e sempre na mesma ordem, toda vez que ela pedir ajuda com um essay de admissão específico.
+Skill que transforma o sistema de 9 documentos construído nesta conta (pesquisa oficial de admissions + banco de essays reais analisados + taxonomia de estrutura + biblioteca de técnicas + banco de histórias pessoais da Dayane + síntese narrativa + blueprint estratégico + perfil de voz + command center com as 34 universidades-alvo) em um workflow executável, obrigatório e sempre na mesma ordem, toda vez que ela pedir ajuda com um essay de admissão específico.
 
 ## Quando usar esta skill
 
@@ -31,6 +31,7 @@ Leia os arquivos relevantes de cada etapa antes de executá-la — não trabalhe
 | `APPLICANT_NARRATIVE.md` | Core traits, threads (intelectual/pessoal/contribuição), Redundancy Map, tensões preservadas — usado em RANKING, REDUNDANCY CHECK e ADMISSIONS CHECK. |
 | `COLLEGE_ESSAY_BLUEPRINT.md` | Estratégia por categoria de essay (objetivo real, riscos, clichês comuns, o que evitar repetir) — usado em quase todas as etapas como referência central. |
 | `VOICE_PROFILE.md` | Padrões reais da voz escrita/falada da Dayane — usado em VOICE CHECK. Ainda é uma primeira versão (duas amostras); atualize se surgir nova amostra de escrita dela. |
+| `ESSAY_COMMAND_CENTER.md` | Painel vivo com as 34 universidades-alvo (tier, deadline, accept rate) e a tabela de todo essay em andamento — consultado no início de toda etapa (para saber o que já existe) e **atualizado automaticamente ao final de cada etapa** (ver seção própria abaixo). |
 
 Se algum desses arquivos não existir ou estiver claramente desatualizado em relação à conversa atual, avise antes de continuar — não prossiga como se o arquivo dissesse algo que ele não diz.
 
@@ -93,6 +94,21 @@ Releia especificamente atrás de frases ou ideias genéricas — cruzando com os
 
 ### 14. FINAL EDIT
 Melhore clareza, ritmo, estrutura e concisão — **sem artificializar a voz**. Qualquer mudança de frase precisa passar pelo mesmo teste do VOICE CHECK (etapa 10). Entregue a versão final junto com um resumo curto do que mudou entre o rascunho (etapa 9) e esta versão, e por quê.
+
+---
+
+## Atualização automática do ESSAY_COMMAND_CENTER.md
+
+O Command Center não se atualiza sozinho — é uma responsabilidade desta skill, não um pedido separado que a Dayane precisa fazer toda vez. Sempre que qualquer etapa do workflow acima for concluída para um essay (mesmo que o essay inteiro ainda não esteja pronto), atualize no mesmo turno:
+
+- **Tabela Principal:** crie ou atualize a linha (University, Essay, Prompt, Word Limit, Category, Story, Structure, Core Trait, Status) assim que cada uma dessas informações for decidida — não espere o essay terminar para registrar. O `Status` segue a legenda do próprio Command Center (Not started → Research → Story selected → Structure selected → Outline → Draft 1 → Revision → Final → Submitted).
+- **Story Usage Matrix:** adicione a universidade/essay na coluna "Usada em" da história escolhida assim que a etapa 5 (RANKING) definir a vencedora.
+- **Trait Coverage Matrix:** marque o core trait correspondente assim que ele for identificado (geralmente junto com a etapa 11, ADMISSIONS CHECK).
+- **Structure Usage:** incremente o contador da estrutura escolhida na etapa 6.
+- **Redundancy Alert:** preencha ou atualize se a etapa 12 (REDUNDANCY CHECK) encontrar alguma colisão dentro da mesma universidade.
+- **Application Gaps / Research Gaps:** remova um item quando ele deixar de ser lacuna (ex.: uma história nova preenche um gap; uma universidade tem sua etapa RESEARCH concluída).
+
+Mostre essa atualização como parte visível da resposta (não é um passo silencioso) — mas não é preciso repetir o Command Center inteiro a cada vez, só a mudança feita.
 
 ---
 
